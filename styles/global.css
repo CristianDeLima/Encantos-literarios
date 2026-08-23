@@ -45,9 +45,21 @@
 
 body {
   background-color: var(--shape-background);
-  /* background-image: url(../assets/hero-background.png);
-  background-size: 100%;
-  background-repeat: no-repeat; */
+  background-image: url(../assets/hero-background.png);
+  background-repeat: no-repeat;
+  background-size: 132% 59.25rem;
+  background-position-x: center;
+}
+
+h1 {
+  font: var(--title-lg);
+  color: var(--text-title);
+}
+
+p {
+  font: var(--body-lg);
+  font-weight: 400;
+  color: var(--text-body);
 }
 
 button {

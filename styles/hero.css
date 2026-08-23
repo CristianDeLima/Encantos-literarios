@@ -1,0 +1,20 @@
+.hero {
+  margin-top: 10.25rem;
+  
+  max-width: 75rem;
+  margin-inline: 7.5rem;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  & .highlight {
+    text-align: center;
+    width: 41rem;
+    
+    & p {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
