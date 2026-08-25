@@ -56,24 +56,45 @@
     flex-direction: column;
 
     max-width: 75rem;
-    
 
     & img[src*="opened-spellbook"] {
       width: 5.5rem;
       height: 5.5rem;
       transform: rotate(20.76deg);
       opacity: 0;
+      scale: 0;
+      transition: scale 500ms linear, opacity 500ms linear;
     }
-    
+
     & p {
       font: var(--subtitle);
       color: var(--text-label);
-      & .span-1 {
-        transition: collor 1s ease;
+    }
 
-        & strong {
-          color: var(--blue-light);
-        }
+    & span{
+      font: var(--subtitle);
+      color: var(--text-label);
+
+      &:nth-child(1) {
+        transition: color 500ms linear;
+      }
+      &:nth-child(3) {
+        transition: color 500ms 250ms linear;
+      }
+      &:nth-child(5) {
+        transition: color 500ms 500ms linear;
+      }
+    }
+
+    & strong {
+      &:nth-child(2) {
+        transition: color 500ms linear;
+      }
+      &:nth-child(4) {
+        transition: color 500ms 500ms linear;
+      }
+      &:nth-child(6) {
+        transition: color 500ms 1s linear;
       }
     }
     
@@ -86,13 +107,57 @@
       & img[src*="ouija-planchette"] {
         width: 5rem;
         transform: rotate(99.47deg);
+        opacity: 0;
+        scale: 0;
+        transition: scale 500ms 500ms linear, opacity 500ms 500ms linear;
       }
       
       & img[src*="crystal-ball"] {
         width: 4.5rem;
         transform: rotate(-14.48deg);
         opacity: 0;
+        scale: 0;
+        transition: scale 500ms 1s linear, opacity 500ms 1s linear;
       }
+    }
+
+    &:hover {
+
+      & img[src*="opened-spellbook"] {
+        opacity: 1;
+        scale: 1;
+      }
+      & img[src*="ouija-planchette"] {
+        opacity: 1;
+        scale: 1;
+      }
+      & img[src*="crystal-ball"] {
+        opacity: 1;
+        scale: 1;
+      }
+
+      & p {
+        span:nth-child(1) {
+          color: var(--text-body);
+        }
+        span:nth-child(3) {
+          color: var(--text-body);
+        }
+        span:nth-child(5) {
+          color: var(--text-body);
+        }
+        & strong {
+          &:nth-child(2) {
+            color: var(--blue-light);
+          }
+          &:nth-child(4) {
+            color: var(--blue-light);
+          }
+          &:nth-child(6) {
+            color: var(--blue-light);
+          }
+        }
+      } 
     }
   }
 }
@@ -110,24 +175,5 @@
   100% {
     opacity: 1;
     color: var(--text-body);
-  }
-}
-
-@keyframes teste {
-  0% {
-
-  }
-
-  100% {
-  }
-}
-
-@keyframes fadeInSteps {
-  0% {
-
-  }
-
-  100% {
-
   }
 }
