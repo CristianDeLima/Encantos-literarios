@@ -1,20 +1,133 @@
 .hero {
-  margin-top: 10.25rem;
-  
-  max-width: 75rem;
-  margin-inline: 7.5rem;
-  
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
-  
-  & .highlight {
+
+  & img[src*="hero-background"] {
+    position: absolute;
+    z-index: -1;
+    
+    width: 130%;
+    object-fit: cover;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  & header {
+    width: 70rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 3.5rem;
+    & img {
+      width: 14.375rem;
+    }
+  }
+
+  & .hero-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    max-width: 41rem;
     text-align: center;
-    width: 41rem;
+
+    margin-top: 10.25rem;
+
+    & h2 {
+      animation: fadeIn 1.5s linear forwards;
+    }
     
     & p {
-      text-align: center;
       margin-top: 2rem;
+      color: transparent;
+      animation: fadeIn 0.8s .7s linear forwards;
+      max-width: 35.5rem;
     }
+  }
+
+  & .hero-gift {
+    margin-top: 35.375rem ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 75rem;
+    
+
+    & img[src*="opened-spellbook"] {
+      width: 5.5rem;
+      height: 5.5rem;
+      transform: rotate(20.76deg);
+      opacity: 0;
+    }
+    
+    & p {
+      font: var(--subtitle);
+      color: var(--text-label);
+      & .span-1 {
+        transition: collor 1s ease;
+
+        & strong {
+          color: var(--blue-light);
+        }
+      }
+    }
+    
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      
+      & img[src*="ouija-planchette"] {
+        width: 5rem;
+        transform: rotate(99.47deg);
+      }
+      
+      & img[src*="crystal-ball"] {
+        width: 4.5rem;
+        transform: rotate(-14.48deg);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+    color: var(--text-body);
+  }
+  
+  100% {
+    opacity: 1;
+    color: var(--text-body);
+  }
+}
+
+@keyframes teste {
+  0% {
+
+  }
+
+  100% {
+  }
+}
+
+@keyframes fadeInSteps {
+  0% {
+
+  }
+
+  100% {
+
   }
 }
