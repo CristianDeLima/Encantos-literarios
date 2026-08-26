@@ -63,7 +63,7 @@
       transform: rotate(20.76deg);
       opacity: 0;
       scale: 0;
-      transition: scale 500ms linear, opacity 500ms linear;
+      transition: scale 500ms linear, opacity 500ms linear, rotate 500ms linear;
     }
 
     & p {
@@ -109,7 +109,7 @@
         transform: rotate(99.47deg);
         opacity: 0;
         scale: 0;
-        transition: scale 500ms 500ms linear, opacity 500ms 500ms linear;
+        transition: scale 500ms linear, opacity 500ms 500ms linear, rotate 500ms linear;
       }
       
       & img[src*="crystal-ball"] {
@@ -117,7 +117,7 @@
         transform: rotate(-14.48deg);
         opacity: 0;
         scale: 0;
-        transition: scale 500ms 1s linear, opacity 500ms 1s linear;
+        transition: scale 500ms linear, opacity 500ms 1s linear, rotate 500ms linear;
       }
     }
 
@@ -126,14 +126,29 @@
       & img[src*="opened-spellbook"] {
         opacity: 1;
         scale: 1;
+
+        &:hover {
+          scale: 1.1;
+          rotate: 10deg;
+        }
       }
       & img[src*="ouija-planchette"] {
         opacity: 1;
         scale: 1;
+        
+        &:hover {
+          scale: 1.1;
+          rotate: 10deg;
+        }
       }
       & img[src*="crystal-ball"] {
         opacity: 1;
         scale: 1;
+
+        &:hover {
+          scale: 1.1;
+          rotate: 10deg;
+        }
       }
 
       & p {
