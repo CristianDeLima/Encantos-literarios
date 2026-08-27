@@ -15,7 +15,9 @@
   }
 
   & header {
-    width: 70rem;
+    width: 100%;
+    margin-inline: 10rem;
+    padding-inline: 10rem;
 
     display: flex;
     align-items: center;
@@ -51,11 +53,14 @@
 
   & .hero-gift {
     margin-top: 35.375rem ;
+    padding-bottom: 4.5rem;
+    margin-bottom: 5rem;
+    margin-inline: 7.5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    max-width: 75rem;
+
     text-align: center;
 
     & img[src*="opened-spellbook"] {
@@ -64,7 +69,7 @@
       transform: rotate(20.76deg);
       opacity: 0;
       scale: 0;
-      transition: scale 500ms linear, opacity 500ms linear, rotate 500ms linear;
+      transition: scale 250ms linear, opacity 250ms linear, rotate 250ms linear;
     }
 
     & p {
@@ -77,25 +82,25 @@
       color: var(--text-label);
 
       &:nth-child(1) {
-        transition: color 500ms linear;
+        transition: color 1ms linear;
       }
       &:nth-child(3) {
-        transition: color 500ms 250ms linear;
+        transition: color 1ms 500ms linear;
       }
       &:nth-child(5) {
-        transition: color 500ms 500ms linear;
+        transition: color 1ms 1s linear;
       }
     }
 
     & strong {
       &:nth-child(2) {
-        transition: color 500ms linear;
+        transition: color 1ms linear;
       }
       &:nth-child(4) {
-        transition: color 500ms 500ms linear;
+        transition: color 1ms 500ms linear;
       }
       &:nth-child(6) {
-        transition: color 500ms 1s linear;
+        transition: color 1ms 1s linear;
       }
     }
     
@@ -110,7 +115,7 @@
         transform: rotate(99.47deg);
         opacity: 0;
         scale: 0;
-        transition: scale 500ms linear, opacity 500ms 500ms linear, rotate 500ms linear;
+        transition: scale 250ms linear, opacity 250ms 500ms linear, rotate 250ms linear;
       }
       
       & img[src*="crystal-ball"] {
@@ -118,7 +123,7 @@
         transform: rotate(-14.48deg);
         opacity: 0;
         scale: 0;
-        transition: scale 500ms linear, opacity 500ms 1s linear, rotate 500ms linear;
+        transition: scale 250ms linear, opacity 250ms 1s linear, rotate 250ms linear;
       }
     }
 
