@@ -1,0 +1,26 @@
+.container-book {
+  & .header-book {
+    text-align: center;
+    margin-top: 14.6875rem;
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      
+      & img {
+        filter: drop-shadow(0 0 0.5rem var(--pink-base));
+      }
+
+      & h2 {
+        font: var(--title-sm);
+      }
+    }
+    
+    & p {
+      font: var(--body-md);
+      font-weight: 400;
+    }
+  }
+  
+}
