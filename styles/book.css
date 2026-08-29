@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   gap: 5.5rem;
-
+  margin-bottom: 17.375rem;
   & .header-book {
     text-align: center;
     margin-top: 14.6875rem;
@@ -38,6 +38,18 @@
 
     width: 90rem;
     height: 57.5rem;
+
+    & .background-blur {
+      position: absolute;
+
+      width: 58.125rem;
+      height: 58.125rem;
+      border-radius: 50%;
+      
+      background-color: var(--pink-low);
+      opacity: 0.5;
+      filter: blur(300px);
+    }
 
     & img[src*="book.png"] {
       position: absolute;
