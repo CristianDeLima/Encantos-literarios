@@ -1,4 +1,9 @@
 .container-book {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5.5rem;
+
   & .header-book {
     text-align: center;
     margin-top: 14.6875rem;
@@ -23,4 +28,203 @@
     }
   }
   
+  & .book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    position: relative;
+
+    width: 90rem;
+    height: 57.5rem;
+
+    & img[src*="book.png"] {
+      position: absolute;
+      z-index: 1;
+      width: 29.1875rem;
+      height: 38.5625rem;
+    }
+
+    & .book-animations {
+      position: relative;
+      width: 22.3125rem;
+      height: 33.5rem;
+      
+      & .left-side {
+        position: absolute;
+        left: 0;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 33.5rem;
+
+        & .top {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          & p {
+            translate: 0;
+            transition: translate 250ms linear;
+          }
+
+          & img {
+            translate: 0;
+            width: 0;
+            height: 0;
+            transition: translate 250ms linear, width 250ms linear, height 250ms linear;
+          }
+        }
+
+        & .bottom {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+
+          & p {
+            translate: 0;
+            transition: translate 250ms linear;
+          }
+
+          & img:nth-child(2) {
+            translate: 0;
+            width: 2.335rem;
+            height: 2.828125rem;
+            transition: translate 250ms linear, width 250ms linear, height 250ms linear;
+          }
+
+          & img[src*="pin"] {
+            width: 13.875rem;
+            height: 15.875rem;
+            rotate: 0;
+            translate: 0;
+            transition: rotate 250ms linear, translate 250ms linear, scale 250ms linear;
+          }
+        }
+
+      }
+      
+      & .right-side {
+        position: absolute;
+
+        right: 0;
+        top: 0;
+
+        height: 33.5rem;
+        width: 100%;
+
+        & img[src*="bookmark"] {
+          position: absolute;
+          width: 10.75rem;
+          height: 33.5rem;
+          right: 0;
+
+          &[src*="yellow"] {
+            rotate: 0;
+            translate: 0;
+            transition: translate 250ms linear, rotate 250ms linear;
+          }
+
+          &[src*="purple"] {
+            rotate: 0;
+            translate: 0;
+            transition: translate 250ms linear, rotate 250ms linear;
+          }
+
+
+        }
+
+        & .bottom-right {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          bottom: 0;
+          right: 0;
+
+          & img {
+            translate: 0;
+            width: 3.23875rem;
+            height: 3.373125rem;
+            transition: translate 250ms linear, width 250ms linear, height 250ms linear;
+          }
+
+          & p {
+            translate: 0;
+            transition: translate 250ms linear;
+          }
+        }
+      }
+    }
+  }
+
+  & .book:hover {
+
+    & .left-side {
+      & .top {
+
+        & p {
+          translate: -16.25rem -6.25rem;
+        }
+
+        & img {
+            translate: -11.25rem -5.3125rem;
+            width: 10.875rem;
+            height: 1.875rem;
+        }
+      }
+
+      & .bottom {
+
+        & p {
+          translate: -18.125rem 10rem;
+        }
+
+        & img:nth-child(2) {
+          translate: -15.625rem 11.25rem;
+          width: 6.553125rem;
+          height: 7.9375rem;
+        }
+
+        & img[src*="pin"] {
+          rotate: -8deg;
+          translate: -12.1875rem 8.125rem;
+        }
+      }
+    }
+
+    & .right-side {
+
+
+      & img[src*="bookmark"] {
+
+        &[src*="yellow"] {
+          rotate: 12deg;
+          translate: 10.625rem -6.2rem;
+        }
+
+        &[src*="purple"] {
+          rotate: 22deg;
+          translate: 16.875rem;
+        }
+      }
+
+      & .bottom-right {
+
+        & img {
+          translate: 15rem 8.75rem;
+          width: 9.090625rem;
+          height: 9.46875rem;
+        }
+
+        & p {
+          translate: 11.5625rem 9.375rem;
+        }
+      }
+      
+    }
+  }
 }
