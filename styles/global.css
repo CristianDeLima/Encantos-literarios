@@ -70,11 +70,19 @@ p {
 button {
   border-radius: .5rem;
   padding: .75rem 1.25rem;
-  
-  display: block;
-  width: fit-content;
-  height: fit-content;
+  background-color: var(--pink-dark);
+  text-decoration: none;
+  font: var(--button);
+  color: var(--text-title);
 
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  border-radius: .5rem;
+  padding: .75rem 1.25rem;
+  background-color: var(--pink-dark);
   text-decoration: none;
   font: var(--button);
   color: var(--text-title);

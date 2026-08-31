@@ -163,6 +163,10 @@
 
       & button {
         background-color: var(--blue-dark);
+        transition: background-color 250ms linear;
+        &:hover {
+          background-color: var(--blue-mid);
+        }
       }
     }
     
@@ -176,6 +180,10 @@
       
       & button {
         background-color: var(--pink-dark);
+        transition: background-color 250ms linear;
+        &:hover {
+          background-color: var(--pink-base);
+        }
       }
     }
     
@@ -202,6 +210,10 @@
       
       & button {
         background-color: var(--blue-dark);
+        transition: background-color 250ms linear;
+        &:hover {
+          background-color: var(--blue-mid);
+        }
       }
     }
 
