@@ -40,7 +40,7 @@
   --body-lg: 700 1.25rem/140% var(--ff-base);
   --button: 700 .875rem var(--ff-base);
   --link: 500 .75rem var(--ff-base);
-  --tag: 700 .625 var(--ff-base);
+  --tag: 700 .625rem var(--ff-base);
 }
 
 body {
