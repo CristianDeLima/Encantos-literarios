@@ -116,3 +116,29 @@ a {
     color: var(--text-body);
   }
 }
+
+.only-mobile {
+  display: none;
+}
+
+@media (width < 90rem) {
+  :root {
+    --title-lg: 700 1.75rem var(--ff-base);
+    --body-lg: 400 0.875rem/140% var(--ff-base);
+    --subtitle: 500 1rem/140% var(--ff-base);
+    --title-sm: 700 1.5rem var(--ff-base);
+    --title-md: 400 0.875rem var(--ff-base);
+    --body-md: 400 0.625rem var(--ff-base);
+    --title-xs: 700 1rem var(--ff-base);
+    --body-sm: 700 .875rem/140% var(--ff-base);
+    --button: 700 .875rem var(--ff-base);
+    --link: 500 .75rem var(--ff-base);
+  }
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: block;
+  }
+}

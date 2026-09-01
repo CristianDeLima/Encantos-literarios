@@ -85,12 +85,10 @@
     padding-bottom: 4.5rem;
     margin-bottom: 5rem;
     margin-inline: 7.5rem;
+
     display: flex;
     align-items: center;
     flex-direction: column;
-
-
-    text-align: center;
 
     & img[src*="opened-spellbook"] {
       width: 5.5rem;
@@ -104,6 +102,7 @@
     & p {
       font: var(--subtitle);
       color: var(--text-label);
+      text-align: center;
     }
 
     & span{
@@ -225,5 +224,123 @@
   100% {
     opacity: 1;
     color: var(--text-body);
+  }
+}
+
+@media (width < 90rem) {
+  .hero {
+
+    & img[src*="hero-background"] {
+      width: 250%;
+      height: 29rem;
+      animation: none;
+    }
+
+    & header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-block: 0;
+      padding-inline: 1.25rem;
+      margin-top: 1.25rem;
+      
+      & img {
+        width: 4.034375rem;
+        height: 3rem;
+      }
+    }
+
+    & .hero-title {
+      margin-top: 3rem;
+      margin-bottom: 12.0625rem;
+      padding-inline: 1.25rem;
+
+      & h2 {
+        color: var(--text-body);
+        animation: none;
+      }
+
+      & p {
+        margin-top: 1rem;
+        color: var(--text-body);
+        animation: none;
+      }
+    }
+
+    & .hero-gift {
+      padding-bottom: 1rem;
+      margin: 0;
+      position: relative;
+
+      & img[src*="opened-spellbook"] {
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        transform: rotate(15deg);
+        opacity: 1;
+        scale: 1;
+        right: 4.625rem;
+        top: 1.75rem;
+      }
+
+      & p {
+        color: var(--text-body);
+        padding-top: 5.10375rem;
+        padding-inline: 1.25rem;
+      }
+
+      & span{
+        font: inherit;
+        color: inherit;
+
+        &:nth-child(1) {
+          transition: none;
+        }
+        &:nth-child(3) {
+          transition: none;
+        }
+        &:nth-child(5) {
+          transition: none;
+        }
+      }
+
+      & strong {
+        font: inherit;
+        color: inherit;
+
+        &:nth-child(2) {
+          transition: none;
+        }
+        &:nth-child(4) {
+          transition: none;
+        }
+        &:nth-child(6) {
+          transition: none;
+        }
+      }
+
+      & div {
+        padding-inline: 1.25rem;
+        & img[src*="ouija-planchette"] {
+          width: 2rem;
+          transform: rotate(-30deg);
+          opacity: 1;
+          scale: 1;
+          transition: none;
+          left: 0.875rem;
+          bottom: 3.125rem;
+        }
+
+        & img[src*="crystal-ball"] {
+          width: 2.5rem;
+          transform: rotate(15deg);
+          opacity: 1;
+          scale: 1;
+          transition: none;
+        }
+      }
+    }
+    
   }
 }
