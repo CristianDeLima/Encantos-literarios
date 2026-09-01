@@ -278,7 +278,6 @@
           }
         }
       }
-      }
     }
 
     &:hover {
@@ -298,12 +297,15 @@
         &:hover {
           z-index: 2;
 
-          & img:nth-child(1) {
-            rotate: -15deg;
-          }
-          
-          & img:nth-child(2) {
-            rotate: 15deg;
+          & .images {
+
+            & img:nth-child(1) {
+              rotate: -15deg;
+            }
+            
+            & img:nth-child(2) {
+              rotate: 15deg;
+            }
           }
         }
       }
@@ -314,12 +316,15 @@
 
         &:hover {
           z-index: 1;
-          & img:nth-child(1) {
-            rotate: 15deg;
-          }
-          
-          & img:nth-child(2) {
-            rotate: -15deg;
+
+          & .images {
+            & img:nth-child(1) {
+              rotate: 15deg;
+            }
+            
+            & img:nth-child(2) {
+              rotate: -15deg;
+            }
           }
         }
       }
