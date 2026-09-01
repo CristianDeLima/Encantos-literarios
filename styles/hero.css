@@ -1,16 +1,16 @@
 .hero {
-  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  position: relative;
+  
   & img[src*="hero-background"] {
     position: absolute;
     z-index: -1;
     
     width: 130%;
-    object-fit: cover;
+    height: 59.25rem;
     animation: fadeIn 1.5s ease forwards;
   }
 
@@ -66,6 +66,7 @@
     text-align: center;
 
     margin-top: 10.25rem;
+    margin-bottom: 29.375rem;
 
     & h2 {
       animation: fadeIn 1.5s linear forwards;
@@ -80,7 +81,7 @@
   }
 
   & .hero-gift {
-    margin-top: 35.375rem ;
+    margin-top: 6rem ;
     padding-bottom: 4.5rem;
     margin-bottom: 5rem;
     margin-inline: 7.5rem;
