@@ -162,10 +162,31 @@
       }
 
       & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 0;
         background-color: var(--blue-dark);
-        transition: background-color 250ms linear;
-        &:hover {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-radius: .5rem;
+          width: 0%;
+          height: 0%;
           background-color: var(--blue-mid);
+          z-index: -1;
+          transition: width 250ms linear, height 250ms linear;
+        }
+
+        &:hover {
+
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -179,10 +200,31 @@
       }
       
       & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 0;
         background-color: var(--pink-dark);
-        transition: background-color 250ms linear;
-        &:hover {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-radius: .5rem;
+          width: 0%;
+          height: 0%;
           background-color: var(--pink-base);
+          z-index: -1;
+          transition: width 250ms linear, height 250ms linear;
+        }
+
+        &:hover {
+
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -209,11 +251,33 @@
       }
       
       & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 0;
         background-color: var(--blue-dark);
-        transition: background-color 250ms linear;
-        &:hover {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-radius: .5rem;
+          width: 0%;
+          height: 0%;
           background-color: var(--blue-mid);
+          z-index: -1;
+          transition: width 250ms linear, height 250ms linear;
         }
+
+        &:hover {
+
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
       }
     }
 
