@@ -143,8 +143,8 @@
 
     & .left {
       z-index: 0;
-      transition: rotate 250ms linear, translate 250ms linear, transform 250ms linear;
-
+      animation: slideLeft 250ms forwards;
+      animation-play-state: paused;
       & .images {
         position: absolute;
         display: flex;
@@ -231,7 +231,8 @@
     
     & .right {
       z-index: 0;
-      transition: rotate 250ms linear, translate 250ms linear, transform 250ms linear;
+      animation: slideRight 250ms forwards;
+      animation-play-state: paused;
 
       & .images {
         position: absolute;
@@ -281,7 +282,7 @@
     }
 
     &:hover {
-
+      
       & .card {
         &:hover {
           filter: drop-shadow(0 0 1rem var(--shape-base));
@@ -291,19 +292,16 @@
       }
 
       & .left {
-        rotate: -8deg;
-        translate: -18.125rem 3.75rem;
-
+        animation-play-state: running;
         &:hover {
           z-index: 2;
-
-          & .images {
-
-            & img:nth-child(1) {
+          
+          & .images img{
+  
+            &:nth-child(1) {
               rotate: -15deg;
             }
-            
-            & img:nth-child(2) {
+            &:nth-child(2) {
               rotate: 15deg;
             }
           }
@@ -311,23 +309,34 @@
       }
       
       & .right {
-        rotate: 8deg;
-        translate: 18.125rem 3.75rem;
-
+        animation-play-state: running;
         &:hover {
           z-index: 1;
-
-          & .images {
-            & img:nth-child(1) {
+  
+          & .images img{
+            &:nth-child(1) {
               rotate: 15deg;
             }
-            
-            & img:nth-child(2) {
+            &:nth-child(2) {
               rotate: -15deg;
             }
           }
         }
       }
     }
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    rotate: -8deg;
+    translate: -18.125rem 3.75rem;
+  }
+}
+
+@keyframes slideRight {
+  to {
+    rotate: 8deg;
+    translate: 18.125rem 3.75rem;
   }
 }
