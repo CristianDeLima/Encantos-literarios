@@ -4,9 +4,11 @@
   flex-direction: column;
   gap: 5.5rem;
   margin-bottom: 17.375rem;
+
   & .header-book {
     text-align: center;
     margin-top: 14.6875rem;
+
     & div {
       display: flex;
       align-items: center;
@@ -115,7 +117,6 @@
             transition: rotate 250ms linear, translate 250ms linear, scale 250ms linear;
           }
         }
-
       }
       
       & .right-side {
@@ -144,8 +145,6 @@
             translate: 0;
             transition: translate 250ms linear, rotate 250ms linear;
           }
-
-
         }
 
         & .bottom-right {
@@ -236,7 +235,118 @@
           translate: 11.5625rem 9.375rem;
         }
       }
-      
+    }
+  }
+}
+
+@media (width < 90rem) {
+  .container-book {
+
+    & .header-book {
+      margin: 6.5rem 2rem 4rem 2rem;
+
+      & div {
+        gap: 0.75rem;
+
+        & img {
+          width: 1.25rem;
+        }
+      }
+
+      & p {
+        font-size: 0.875rem;
+      }
+    }
+
+    & .book {
+      width: 23.4375rem;
+      height: 19.9375rem;
+
+      & .background-blur {
+        width: 18.625rem;
+        height: 18.625rem;
+        filter: blur(103.226px);
+      }
+
+      & img[src*="book.png"] {
+        width: 9.824375rem;
+        height: 12.98rem;
+      }
+
+      & .book-animations {
+        
+        & .left-side {
+
+          & .top {
+
+            & p {
+              font-size: 0.625rem;
+              translate: 0.8125rem 2.1875rem;
+            }
+
+            & img {
+              width: 3.67125rem;
+              height: 0.63125rem;
+              translate: 2.6875rem 2.1875rem;
+            }
+          }
+
+          & .bottom {
+
+            & p {
+              font-size: 0.625rem;
+              translate: 1.0625rem -14.875rem;
+            }
+
+            & img:nth-child(2) {
+              width: 2.205625rem;
+              height: 2.671875rem;
+              translate: 2.0625rem -13.9375rem;
+            }
+
+            & img[src*="pin"] {
+              width: 4.680625rem;
+              height: 5.3375rem;
+              translate: 3.125rem -14.875rem;
+              rotate: -8deg;
+            }
+          }
+        }
+
+        & .right-side {
+
+          & img[src*="bookmark"] {
+
+            &[src*="yellow"] {
+                width: 3.65rem;
+                height: 11.3075rem;
+                rotate: 11.72deg;
+                translate: -3.75rem 1.875rem;
+              }
+              
+              &[src*="purple"] {
+                width: 3.618125rem;
+                height: 11.275625rem;
+                rotate: 22.09deg;
+                translate: -1.625rem 3.75rem;
+              }
+          }
+
+          & .bottom-right {
+
+            & img {
+              width: 3.06rem;
+              height: 3.186875rem;
+              translate: -0.9375rem -15.3125rem;
+            }
+
+            & p {
+              font-size: 0.625rem;
+              translate: -1.875rem -15.3125rem;
+            }
+          }
+        }
+      }
     }
   }
 }
