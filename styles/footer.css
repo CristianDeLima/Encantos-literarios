@@ -77,10 +77,6 @@ footer {
   
         & a {
           transition: color 250ms linear;
-  
-          &:hover {
-            color: var(--text-body);
-          }
         }
       }
     }
@@ -146,6 +142,10 @@ footer {
 
         & .about {
           width: 8.9375rem;
+
+          & a {
+            transition: none;
+          }
         }
       }
     }

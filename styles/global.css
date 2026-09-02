@@ -141,4 +141,8 @@ a {
   .only-mobile {
     display: block;
   }
+
+  a:hover {
+    color: var(--blue-light);
+  }
 }
