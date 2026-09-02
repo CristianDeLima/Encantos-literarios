@@ -142,6 +142,11 @@ footer {
 
       & .right {
         width: 100%;
+        gap: 1.5rem;
+
+        & .about {
+          width: 8.9375rem;
+        }
       }
     }
   }
