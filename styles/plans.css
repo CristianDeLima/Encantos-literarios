@@ -1,4 +1,4 @@
-.plans {
+#plans {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,17 @@
     margin-top: 12.125rem;
     font: var(--title-sm);
   }
-  
+
+  & .blur-background {
+    position: absolute;
+    filter: blur(284px);
+    width: 59rem;
+    height: 59rem;
+    background-color: var(--shape-base);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
   & .cards {
     display: flex;
     align-items: center;
@@ -26,17 +36,6 @@
     height: 37.875rem;
     margin-bottom: 302px;
     position: relative;
-
-    
-    & .blur-background {
-      position: absolute;
-      filter: blur(284px);
-      width: 59rem;
-      height: 59rem;
-      background-color: var(--shape-base);
-      border-radius: 50%;
-      z-index: -1;
-    }
 
     & .card {
       position: absolute;
@@ -325,6 +324,7 @@
       }
     }
   }
+  
 }
 
 @keyframes slideLeft {
@@ -338,5 +338,80 @@
   to {
     rotate: 8deg;
     translate: 18.125rem 3.75rem;
+  }
+}
+
+@media (width < 90rem) {
+  #plans {
+    & > h2 {
+      margin-top: 6.5rem;
+    }
+    
+    & .cards {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: initial;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+
+      gap: 1rem;
+
+      margin-left: 3.25rem;
+      & .card {
+        margin-top: 3rem;
+        flex: 0 0 auto;
+        position: relative;
+        height: 25rem;
+
+        & header {
+
+          & div {
+            & strong {
+              color: var(--blue-light);
+            }
+          }
+
+          & p {
+            font: var(--title-xs);
+            & strong {
+              font-weight: 700;
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+      & .left {
+        animation: none;
+      }
+
+
+      & .central {
+        & header {
+          & div {
+            & strong {
+              color: var(--pink-light);
+            }
+          }
+        }
+      }
+      
+      & .right {
+        animation: none;
+      }
+
+      &:hover {
+
+        & .card {
+          &:hover {
+            background-color: var(--shape-base);
+            transform: translateY(0);
+            filter: none;
+          }
+        }
+      }
+    }
   }
 }
